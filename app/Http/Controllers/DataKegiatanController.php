@@ -51,7 +51,7 @@ class DataKegiatanController extends Controller
     {
         // \App\Models\Data_kegiatan::create($request->all());
         $data = \App\Models\Data_kegiatan::find($id);
-$data->delete();
+        $data->delete();
 
         return redirect('/data-kegiatan')->with('success','Data Berhasil ditambahkan');
     }

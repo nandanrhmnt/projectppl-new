@@ -23,9 +23,18 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/postlogin', [AuthController::class, 'postlogin']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/login', 'login')->name('login');
+    Route::post('/postlogin', 'postlogin');
+    Route::get('/logout', 'logout');
+
+});
+
+Route::controller(RegisterController::class)->group(function () {
+    Route::get('/daftar', 'register')->name('register');
+    Route::post('/daftar', 'store')->name('daftar');
+});
+
 
 // Route::group([
 //     'prefix' => config('admin.prefix'),
@@ -42,8 +51,8 @@ Route::get('/logout', [AuthController::class, 'logout']);
 //     });
 // });
 
-Route::get('daftar',[RegisterController::class, 'form'])->name('user.register');
-Route::post('daftar',[RegisterController::class, 'simpan']);
+
+
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dashboard', [DashboardController::class, 'index']);

@@ -4,30 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
-    public function form()
+    public function register()
     {
-        return view("auths.register");
+        return view('auths.register');
     }
 
     public function simpan(Request $request)
     {
+
         $request->validate([
-            'nama'=>'required|min:4',
-            'email'=>'required|email|unique:admins.email',
-            'role'=>'required|in:admin,user',
-            'password'=>'required|min:4|confirmed'
+            'nama' => 'required|min:4',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:4|confirmed'
         ]);
 
-        User::create([
-            'nama'=> $request->nama,
-            'email'=> $request->email,
-            'role'=> $request->role,
-            'password'=>bcrypt($request->password)
+        $user = User::create([
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
         ]);
 
-        return redirect()->route('user.login')->with('pesan', 'berhasil');
+        // Log the user in after registration
+        Auth::login($user);
+
+        return redirect()->route('login')->with('pesan', 'berhasil');
     }
 }
