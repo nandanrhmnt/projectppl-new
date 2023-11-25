@@ -42,11 +42,11 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about" style="color: black;">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services" style="color: black;">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" style="color: black;">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" style="color: black;">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio" style="color: black;">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: black;">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/login" style="color: black;">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: black;">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login" style="color: black;">Masuk</a></li>
                 </ul>
             </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">Apa yang Anda butuhkan!</h2>
+                    <h2 class="text-white mt-0">Apa yang Anda butuhkan?</h2>
                     <hr class="divider divider-light">
                     <p class="text-white-75 mb-4">Sistem pendaftaran PKKMB Universitas Bengkulu memiliki segala yang Anda butuhkan untuk memulai perjalanan Anda sebagai mahasiswa baru. Daftarkan diri sekarang!</p>
                     <a class="btn btn-light btn-xl" href="/login">MASUK</a>
@@ -183,7 +183,7 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Contact Us!</h2>
+                    <h2 class="mt-0">Hubungi Kami!</h2>
                     <hr class="divider">
                     <p class="text-muted mb-5">Kirimkan pertanyaan, saran, maupun kritik kepada kami dan kami akan segera merespons Anda!</p>
                 </div>
@@ -201,27 +201,27 @@
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sb-can-submit="no">
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            <label for="name">Nama Lengkap</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">harus diisi.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            <label for="email">Alamat Email</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">harus diisi.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email tidak valid.</div>
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" data-sb-can-submit="no">
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            <label for="phone">Nomor HP</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">harus diisi.</div>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
                             <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" data-sb-can-submit="no"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            <label for="message">Pesan</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">harus diisi.</div>
                         </div>
                         <!-- Submit success message-->
                         <!---->
@@ -241,7 +241,7 @@
                         <!-- an error submitting the form-->
                         <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                         <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Kirim</button></div>
                     </form>
                 </div>
             </div>
